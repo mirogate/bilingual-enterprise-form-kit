@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bilingual enterprise form example</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; }
+    body { margin: 0; background: #f6f7f9; color: #141820; }
+    main { width: min(760px, calc(100% - 32px)); margin: 48px auto; }
+    form { display: grid; gap: 16px; background: #fff; border: 1px solid #d9dde5; border-radius: 8px; padding: 22px; }
+    label { display: grid; gap: 6px; font-weight: 700; }
+    input, textarea, select, button { font: inherit; border-radius: 6px; }
+    input, textarea, select { border: 1px solid #c8ced8; padding: 10px 12px; }
+    textarea { min-height: 140px; resize: vertical; }
+    button { min-height: 42px; border: 0; background: #141820; color: white; font-weight: 700; }
+    .hp { position: absolute; left: -9999px; opacity: 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Bilingual enterprise form</h1>
+    <form method="post" action="/api/contact" dir="ltr">
+      <label>
+        Language
+        <select name="locale">
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+        </select>
+      </label>
+      <label>
+        Name
+        <input name="name" autocomplete="name" required>
+      </label>
+      <label>
+        Email
+        <input name="email" type="email" autocomplete="email" required>
+      </label>
+      <label>
+        Organization
+        <input name="organization" autocomplete="organization">
+      </label>
+      <label>
+        Brief
+        <textarea name="brief" required minlength="20"></textarea>
+      </label>
+      <label class="hp">
+        Website
+        <input name="website" tabindex="-1" autocomplete="off">
+      </label>
+      <button type="submit">Send request</button>
+    </form>
+  </main>
+</body>
+</html>

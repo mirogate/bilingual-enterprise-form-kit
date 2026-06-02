@@ -1,0 +1,11 @@
+{
+  "name": "@mirogate/bilingual-enterprise-form-kit",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Arabic and English enterprise form patterns with validation and worker-side handling.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "node src/validate.mjs --self-test"
+  }
+}
